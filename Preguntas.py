@@ -32,14 +32,17 @@ class Preguntas:
         self.getPregunta3() + "\nPregunta4: " + self.getPregunta4() + "\nPregunta5: " + self.getPregunta5() + "\n")
 
 #se establecen los inputs para ingresar la informacion
-pregunta1 = raw_input("\n(1) Que situaciones tienes en tu vida actualmente? ")
-pregunta2 = raw_input("\n(2) Como te has sentido con esas situaciones? ")
-pregunta3 = raw_input("\n(3) Que trae de positivo estas situaciones? ")
-pregunta4 = raw_input("\n(4) Que trae de negativo estas situaciones? ")
-pregunta5 = raw_input("\n(5) Que mejorarias o aprovecharias esta situacion? ")
-print("\n\n* Recuerda, siempre hay un aprendizaje en cada paso de la vida :) *")
-
+    #def preguntas(self):
+       # pregunta1 = input("\n(1) Que situaciones tienes en tu vida actualmente? ")
+       # pregunta2 = input("\n(2) Como te has sentido con esas situaciones? ")
+        #pregunta3 = input("\n(3) Que trae de positivo estas situaciones? ")
+        #pregunta4 = input("\n(4) Que trae de negativo estas situaciones? ")
+       # pregunta5 = input("\n(5) Que mejorarias o aprovecharias esta situacion? ")
+        #print("\n\n* Recuerda, siempre hay un aprendizaje en cada paso de la vida :) *")
+    #e = Preguntas(pregunta1,pregunta2,pregunta3,pregunta4,pregunta5)
 #genera el constructor con toda la informacion proveida
-e = Preguntas(pregunta1,pregunta2,pregunta3,pregunta4,pregunta5)
+   # preguntas()
+  
 #imprime el constructor mediante la funcion creada
-e.imprimirPreguntas()
+   # imprimirPreguntas()
+    #preguntas()
