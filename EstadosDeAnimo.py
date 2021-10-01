@@ -48,6 +48,7 @@ def main():
     registrar_animo(archivo)
     recuperar_datos(archivo)
     
-if __name__ == "__main__":
+#if __name__ == "__main__":
+   # main()
+class nueva():
     main()
-
