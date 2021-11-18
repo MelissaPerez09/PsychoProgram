@@ -1,4 +1,5 @@
 
+
 import javax.swing.JOptionPane;
 
 /*
@@ -36,10 +37,11 @@ public class Motivacion extends javax.swing.JFrame {
         jPopupMenu2 = new javax.swing.JPopupMenu();
         jPopupMenu3 = new javax.swing.JPopupMenu();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        checkbox1 = new java.awt.Checkbox();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        opciones = new javax.swing.JComboBox<>();
         regresarMoti = new javax.swing.JButton();
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -48,8 +50,9 @@ public class Motivacion extends javax.swing.JFrame {
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
 
+        checkbox1.setLabel("checkbox1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 700));
 
         jPanel1.setBackground(new java.awt.Color(255, 241, 230));
 
@@ -59,17 +62,17 @@ public class Motivacion extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel6.setText("Elige un tipo de motivación y reflexiona sobre ella :D");
 
-        jComboBox1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudiar", "Vivir el presente", "Hacer ejercicio", "Alcanzar una meta", "Trabajar" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        opciones.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        opciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elije una opción", "Estudiar", "Vivir el presente", "Hacer ejercicio", "Alcanzar una meta", "Trabajar" }));
+        opciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                opcionesActionPerformed(evt);
             }
         });
 
         regresarMoti.setBackground(new java.awt.Color(205, 218, 253));
         regresarMoti.setFont(new java.awt.Font("American Typewriter", 0, 14)); // NOI18N
-        regresarMoti.setText("Regresar");
+        regresarMoti.setText("Volver");
         regresarMoti.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresarMotiActionPerformed(evt);
@@ -94,7 +97,7 @@ public class Motivacion extends javax.swing.JFrame {
                         .addComponent(jLabel6)
                         .addGap(150, 150, 150))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(opciones, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(303, 303, 303))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -105,7 +108,7 @@ public class Motivacion extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(jLabel6)
                 .addGap(35, 35, 35)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(opciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 430, Short.MAX_VALUE)
                 .addComponent(regresarMoti, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
@@ -131,12 +134,26 @@ public class Motivacion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        JOptionPane.showMessageDialog( null, "Sólo existen dos días en el año en que no se puede hacer nada. \nUno se llama ayer y otro mañana. \nPor lo tanto hoy es el dia ideal para amar, crecer, hacer y principalmente vivir. \n-Dalai Lama");
-    }                                          
+    private void opcionesActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        if (opciones.getSelectedItem().toString().equals("Vivir el presente")){
+            JOptionPane.showMessageDialog( null, "Sólo existen dos días en el año en que no se puede hacer nada. \nUno se llama ayer y otro mañana. \nPor lo tanto hoy es el dia ideal para amar, crecer, hacer y principalmente vivir. \n-Dalai Lama");      
+        }
+        else if (opciones.getSelectedItem().toString().equals("Estudiar")){
+            JOptionPane.showMessageDialog( null, "La verdadera educación consiste en obtener lo mejor de uno mismo \n-Mahatma Gandhi");      
+        }
+        else if (opciones.getSelectedItem().toString().equals("Hacer ejercicio")){
+            JOptionPane.showMessageDialog( null, "No busques tiempo para hacer ejercicio, encuéntralo. \nNo te puedes poner ningún límite, no hay nada imposible\n -Usain Bolt");
+        }
+        else if (opciones.getSelectedItem().toString().equals("Alcanzar una meta")){
+            JOptionPane.showMessageDialog( null, "El camino es el que nos enseña la mejor forma de llegar\ny nos enriquece mientras lo estamos cruzando. \n-Paulo Cohelo");
+        }
+        else if (opciones.getSelectedItem().toString().equals("Trabajar")){
+            JOptionPane.showMessageDialog( null, "El comienzo es la parte más importante del trabajo. \nLánzate y comienza aquel trabajo que te gusta, sigue perseverando. \n-Platón");
+        }
+    }                                        
 
     private void regresarMotiActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        // TODO add your handling code here:
+
     }                                            
 
     /**
@@ -175,7 +192,7 @@ public class Motivacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify                     
-    private javax.swing.JComboBox<String> jComboBox1;
+    private java.awt.Checkbox checkbox1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -185,6 +202,7 @@ public class Motivacion extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JPopupMenu jPopupMenu3;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
+    private javax.swing.JComboBox<String> opciones;
     private javax.swing.JButton regresarMoti;
     // End of variables declaration                   
 }
